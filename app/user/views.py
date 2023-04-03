@@ -1,5 +1,5 @@
 """
-Views for the user API
+Views for the user API.
 """
 from rest_framework import generics
 from rest_framework.authtoken.views import ObtainAuthToken
@@ -19,4 +19,4 @@ class CreateUserView(generics.CreateAPIView):
 class CreateTokenView(ObtainAuthToken):
     """Create a new auth token for user."""
     serializer_class = AuthTokenSerializer
-    renderer_classes = api_settings.DEFAULT_RENDERED_CLASSES
+    renderer_classes = api_settings.DEFAULT_RENDERER_CLASSES
