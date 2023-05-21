@@ -9,7 +9,7 @@ from core import models
 
 
 class UserAdmin(BaseUserAdmin):
-    """Define the admin pages for users"""
+    """Define the admin pages for users."""
     ordering = ['id']
     list_display = ['email', 'name']
     fieldsets = (
@@ -45,3 +45,4 @@ class UserAdmin(BaseUserAdmin):
 
 
 admin.site.register(models.User, UserAdmin)
+admin.site.register(models.Recipe)
